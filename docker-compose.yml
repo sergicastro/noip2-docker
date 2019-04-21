@@ -1,0 +1,8 @@
+version: '3'
+services:
+    noip:
+        image: sergicastro/noip2
+        command: ${NOIP2_USER} ${NOIP2_PASS}
+        volumes:
+            - ./config:/config:rw
+        restart: always
